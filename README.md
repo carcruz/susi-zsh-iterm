@@ -1,5 +1,8 @@
 # Susi oh-my-zsh theme 
 
+![alt text](https://github.com/carcruz/susi-zsh-iterm/blob/master/preview.png)
+
+
 ## Installation
 
 ### Theme
