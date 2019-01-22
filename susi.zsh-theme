@@ -1,15 +1,15 @@
-# Based on the great hunokai theme (https://github.com/oskarkrawczyk/honukai-iterm-zsh)
+# Based on the great ys theme (http://ysmood.org/wp/2013/03/my-ys-terminal-theme/)
 
 # Machine name.
 function box_name {
-    [ -f ~/.box-name ] && cat ~/.box-name || echo $HOST
+    [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
 
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
 
 # VCS
-YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
+YS_VCS_PROMPT_PREFIX1=" "
 YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}✖︎"
@@ -41,6 +41,8 @@ ys_hg_prompt_info() {
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
 %{$fg[cyan]%}%n \
+%{$fg[white]%}at \
+%{$fg[yellow]%}$(box_name) \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[green]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
