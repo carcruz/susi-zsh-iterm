@@ -15,3 +15,6 @@ Reload ZSH with source ~/.zshrc
 
 Open Preferences pane on the Profiles tab in iTerm
 Switch to the Colors tab and import the susi.itermcolors (drop-down in the lower right corner)
+
+
+by carcruz
